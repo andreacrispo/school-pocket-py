@@ -45,6 +45,16 @@ class ProductionConfig(Config):
 class HerokuConfig(ProductionConfig):
     """ Deployment on Heroku """
     SSL_DISABLE = bool(os.environ.get('SSL_DISABLE'))
+    
+    @classmethod
+    def init_app(cls, app):
+    ProductionConfig.init_app(app)
+    # log to stderr
+    import logging
+    from logging import StreamHandler
+    file_handler = StreamHandler()
+    file_handler.setLevel(logging.WARNING)
+    app.logger.addHandler(file_handler)
 
 config = {
     'development': DevelopmentConfig,
