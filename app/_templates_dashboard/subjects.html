@@ -1,0 +1,37 @@
+{% extends "base_dashboard.html" %}
+
+{% set active_page = _('Subjects') %}
+
+{% block page_content %}
+<div class="row">
+
+<div class="page-header">
+   <h1>  {{ _('Subjects') }}   
+    <a href="{{ url_for('main.action_subject') }}" class="btn btn-primary pull-right" > {{ _('Add Subject') }} </a>
+   </h1>
+</div>
+
+
+  <div class="col-md-4"></div>
+
+  <div class="col-md-4">
+   {% for subject in subjects %}
+    <div class="box box-primary info-box text-center shadow-z-3">
+      <div class="info-box-content">
+        <h1>{{ subject.subject }}           
+            <div class='btn-group pull-right'>
+              <a class='btn btn-primary'  href="{{ url_for('main.action_subject',   id=subject.id) }}" data-toggle="modal" > <i class='glyphicon  glyphicon-pencil'></i> </a>
+              <a class='btn btn-primary'  href="{{ url_for('main.delete_subject', id=subject.id) }}" > <i class='glyphicon glyphicon-trash'></i></a>
+            </div>
+        </h1> 
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+   {% endfor %}
+
+ 
+
+</div> <!-- /col-md-4 -->
+
+  <div class="col-md-4"></div>
+</div> <!-- /rows -->
+{% endblock %}

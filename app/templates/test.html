@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% set active_page =  _('Homeworks')  %}
+
+{% block page_content %}
+
+<div class="page-header">
+   <h1>{{ _('Homeworks') }}  
+    <a href="{{ url_for('main.action_homework') }}" class="btn btn-primary pull-right" >{{  _('Add homework') }}</a>
+   </h1>
+</div>
+
+<table  class="table"  data-toggle="table" data-url="{{ url_for('main.json-test') }}">
+<thead>
+    <tr>  
+        <th>{{ _('Date') }}</th> 
+        <th>{{ _('Homework') }}</th>
+        <th>{{ _('Subject') }}</th>   
+        <th  class="col-md-2"> {{ _('Priority') }}</th>
+        <th  class="col-md-2" id='no_style'  ></th>  
+    </tr>
+</thead>
+<tbody>
+
+{% for homework in homeworks %} 
+    {% if homework.completed %}   
+    <tr class='success'>   
+    {% else %}                    
+    <tr>      {% endif %}
+        <td>{{ moment(homework.deadline).format('L') }}</td> 
+        <td>{{ homework.homework }} </td>
+        <td>{{ homework.subject.subject }} </td>   
+
+        <td>
+        {% if homework.priority== priority.LOW %}
+          <span class="label label-default">{{ _('Low') }}</span>
+        {% elif homework.priority==priority.NORMAL   %}
+          <span class="label label-success">{{ _('Normal') }}</span>  
+        {% elif homework.priority==priority.HIGH %}
+          <span class="label label-danger">{{ _('High') }}</span>
+        {% endif %}
+        </td>
+
+        <td id='no_style' > 
+        <div class='btn-group' >
+          <a class='btn btn-primary'  href="{{ url_for('main.update_homework',id=homework.id)}}"> 
+          <i {% if homework.completed %} 
+                class='glyphicon glyphicon-remove-circle' 
+             {% else %} 
+                class='glyphicon glyphicon-ok-circle' 
+             {% endif %}></i></a> 
+
+
+          <a class='btn btn-primary' href="{{ url_for('main.action_homework',id=homework.id) }}" data-toggle='modal' >         <i class='glyphicon glyphicon-pencil'></i></a>
+          <a class='btn btn-primary' href="{{ url_for('main.delete_homework',id=homework.id)}}"> <i class='glyphicon glyphicon-trash'></i> </a> 
+        </div>
+        </td>  
+    </tr>
+
+{% endfor %}
+
+</tbody>
+</table>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js"></script>
+
+<!-- Latest compiled and minified Locales -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/locale/bootstrap-table-zh-CN.min.js"></script>
+{% endblock %}

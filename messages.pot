@@ -1,0 +1,261 @@
+# Translations template for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-11-14 23:47+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: app/auth/forms.py:10 app/auth/forms.py:20
+msgid "Email"
+msgstr ""
+
+#: app/auth/forms.py:12 app/auth/forms.py:26 app/auth/forms.py:51
+msgid "Password"
+msgstr ""
+
+#: app/auth/forms.py:13
+msgid "Keep me logged in"
+msgstr ""
+
+#: app/auth/forms.py:14
+msgid "Login"
+msgstr ""
+
+#: app/auth/forms.py:22
+msgid "Username"
+msgstr ""
+
+#: app/auth/forms.py:28
+msgid "Confirm password"
+msgstr ""
+
+#: app/auth/forms.py:29 app/templates/auth/register.html:7
+msgid "Register"
+msgstr ""
+
+#: app/auth/forms.py:33
+msgid "Email already registered.Please use another one"
+msgstr ""
+
+#: app/auth/forms.py:37
+msgid "Username already in use."
+msgstr ""
+
+#: app/auth/forms.py:41
+msgid "Old password"
+msgstr ""
+
+#: app/auth/forms.py:42
+msgid "New password"
+msgstr ""
+
+#: app/auth/forms.py:44
+msgid "Confirm new password"
+msgstr ""
+
+#: app/auth/forms.py:45
+msgid "Update Password"
+msgstr ""
+
+#: app/auth/forms.py:49
+msgid "New Email"
+msgstr ""
+
+#: app/auth/forms.py:52
+msgid "Update Email Address"
+msgstr ""
+
+#: app/auth/forms.py:56
+msgid "Email already registered."
+msgstr ""
+
+#: app/auth/views.py:34
+msgid "Invalid email or password"
+msgstr ""
+
+#: app/auth/views.py:50
+msgid "A confirmation email has been sent to you by email."
+msgstr ""
+
+#: app/auth/views.py:60
+msgid "You have confirmed your account. Thanks!"
+msgstr ""
+
+#: app/auth/views.py:62
+msgid "The confirmation link is invalid or has expired."
+msgstr ""
+
+#: app/auth/views.py:72
+msgid "A new confirmation email has been sent to you by email."
+msgstr ""
+
+#: app/main/views.py:49
+msgid "The subject has been inserted."
+msgstr ""
+
+#: app/main/views.py:54
+msgid "The subject has been update."
+msgstr ""
+
+#: app/main/views.py:67
+msgid "Subject was deleted successfully"
+msgstr ""
+
+#: app/main/views.py:93
+msgid "The grade has been inserted."
+msgstr ""
+
+#: app/main/views.py:100
+msgid "The grade has been update."
+msgstr ""
+
+#: app/main/views.py:112
+msgid "Grade was deleted successfully"
+msgstr ""
+
+#: app/main/views.py:140
+msgid "The homework has been inserted."
+msgstr ""
+
+#: app/main/views.py:148
+msgid "The homework has been update."
+msgstr ""
+
+#: app/main/views.py:160
+msgid "Homework was deleted successfully"
+msgstr ""
+
+#: app/main/views.py:170
+msgid "Homework was update successfully"
+msgstr ""
+
+#: app/templates/base.html:6
+msgid "Home"
+msgstr ""
+
+#: app/templates/base.html:7 app/templates/grades.html:3
+#: app/templates/grades.html:8
+msgid "Grades"
+msgstr ""
+
+#: app/templates/base.html:8 app/templates/subjects.html:3
+#: app/templates/subjects.html:9
+msgid "Subjects"
+msgstr ""
+
+#: app/templates/base.html:9 app/templates/homeworks.html:3
+#: app/templates/homeworks.html:8
+msgid "Homeworks"
+msgstr ""
+
+#: app/templates/base.html:48 app/templates/profile.html:7
+msgid "Profile"
+msgstr ""
+
+#: app/templates/grades.html:9
+msgid "Add grades"
+msgstr ""
+
+#: app/templates/grades.html:16 app/templates/homeworks.html:16
+msgid "Date"
+msgstr ""
+
+#: app/templates/grades.html:17
+msgid "Grade"
+msgstr ""
+
+#: app/templates/grades.html:18
+msgid "Description"
+msgstr ""
+
+#: app/templates/homeworks.html:9
+msgid "Add homework"
+msgstr ""
+
+#: app/templates/homeworks.html:17
+msgid "Homework"
+msgstr ""
+
+#: app/templates/homeworks.html:18
+msgid "Subject"
+msgstr ""
+
+#: app/templates/homeworks.html:19
+msgid "Priority"
+msgstr ""
+
+#: app/templates/homeworks.html:36
+msgid "Low"
+msgstr ""
+
+#: app/templates/homeworks.html:38
+msgid "Normal"
+msgstr ""
+
+#: app/templates/homeworks.html:40
+msgid "High"
+msgstr ""
+
+#: app/templates/profile.html:8 app/templates/auth/edit_profile.html:6
+msgid "Edit Profile"
+msgstr ""
+
+#: app/templates/subjects.html:10
+msgid "Add Subject"
+msgstr ""
+
+#: app/templates/auth/change_password.html:6
+#: app/templates/auth/edit_profile.html:13
+msgid "Change Password"
+msgstr ""
+
+#: app/templates/auth/edit_profile.html:12
+msgid "Change Email"
+msgstr ""
+
+#: app/templates/auth/login.html:16
+msgid "Click here to register"
+msgstr ""
+
+#: app/templates/auth/register.html:16
+msgid "Already a member? Click here to Login"
+msgstr ""
+
+#: app/templates/auth/unconfirmed.html:7
+msgid "Hello,"
+msgstr ""
+
+#: app/templates/auth/unconfirmed.html:9
+msgid "You have not confirmed your account yet."
+msgstr ""
+
+#: app/templates/auth/unconfirmed.html:10
+msgid ""
+"\n"
+"        Before you can access this site you need to confirm your account."
+"\n"
+"        Check your inbox, you should have received an email with a "
+"confirmation link.\n"
+"        "
+msgstr ""
+
+#: app/templates/auth/unconfirmed.html:16
+msgid "Need another confirmation email?"
+msgstr ""
+
+#: app/templates/auth/unconfirmed.html:17
+msgid "Click here"
+msgstr ""
+

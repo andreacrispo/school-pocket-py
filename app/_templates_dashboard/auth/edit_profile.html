@@ -1,0 +1,57 @@
+{% extends "base_dashboard.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+
+{% block page_content %}
+<div class="col-md-4"></div>
+
+<div class="col-md-4">
+    <div class="nav-tabs-custom">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab_change_email" data-toggle="tab">{{ _('Change Email') }}</a></li>
+      <li><a href="#tab_change_password" data-toggle="tab">{{ _('Change Password') }}</a></li>
+      <li><a href="#tab_img_profile" data-toggle="tab">{{ _('Change Image Profile') }}</a></li>
+       
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab_change_email">
+            {{ wtf.quick_form(form_email) }}
+      </div><!-- /.tab-pane -->
+
+      <div class="tab-pane" id="tab_change_password">
+         {{ wtf.quick_form(form_password) }}
+      </div><!-- /.tab-pane -->
+
+      <div class="tab-pane" id="tab_img_profile">
+        <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Inserisci l'immagine da caricare</h3>
+                        </div><!-- /.box-header -->
+                        <!-- form start -->
+                        <form role="form" action="{{ url_for('auth.upload') }}" method="post" enctype="multipart/form-data" >
+                          <div class="box-body">
+                            <div class="form-group">
+                              <label for="exampleInputFile">File input</label>
+                              <input type="file" name="photo">
+                              <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                          </div><!-- /.box-body -->
+
+                          <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+        </div>  
+      </div><!-- /.tab-pane -->
+
+    </div><!-- /.tab-content -->
+    </div><!-- nav-tabs-custom -->
+
+</div><!-- /col-md-4 -->
+
+<div class="col-md-4"></div>
+
+{% endblock %}
+

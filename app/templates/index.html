@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% set active_page = 'Home' %}
+
+
+{% block page_content %}
+
+<div class="page-header"></div>
+
+
+  <div class="col-md-4"></div>
+
+  <div class="col-md-4">
+
+   {% for name in models.keys() %}
+  	<div class="well-lg panel panel-default shadow-z-4">
+    	<div class="panel-body">
+			  <h1>
+			      {{ name }}   <div class="btn btn-info pull-right" title=""> {{  models[name] }} </div>	
+        </h1> 	
+    	</div>
+  	</div>
+  	{% endfor %}
+
+
+</div> <!-- /col-md-4 -->
+
+  <div class="col-md-4"></div>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base_dashboard.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block styles %}
+{{ super() }}
+
+{% endblock %}
+
+
+
+{% block page_content %}
+<div class="row">
+  <div class="col-md-6">
+    <canvas id="BarChart" width="800" height="800"></canvas>  
+  </div>
+  <div class="col-md-6">
+    <canvas id="LineChart" width="800" height="800"></canvas>  
+  </div>
+</div>
+{% endblock %}
+
+
+
+{% block scripts %}
+{{ super() }}
+<script src="http://www.chartjs.org/assets/Chart.min.js"></script>
+<script type="text/javascript">
+  
+var ctxBar = $("#BarChart").get(0).getContext("2d");
+var ctxLine = $("#LineChart").get(0).getContext("2d");
+// This will get the first returned node in the jQuery collection.
+
+var data = { 
+    labels: ["Programmazione 1", "Fondamenti", "Analisi", "Programmazione 2", "Algoritmi", "Architettura", "Reti&SO",  "Computabilità"],  
+    datasets: [
+        {
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+
+            data: [27, 24, 30, 29, 30, 26, 20, 25]
+           
+        }
+    ]
+};
+
+var options = {  
+    showScale: true,
+    scaleShowGridLines : true,  ///Boolean - Whether grid lines are shown across the chart
+
+    scaleGridLineColor : "rgba(0,0,0,.05)", //String - Colour of the grid lines
+
+    scaleGridLineWidth : 1,     //Number - Width of the grid lines
+
+    datasetFill : true, //Boolean - Whether to fill the dataset with a colour
+
+    responsive: false,
+};
+var myBarChart  = new Chart(ctxBar).Bar(data, options);
+//var myLineChart = new Chart(ctxLine).Line(data, options);
+
+</script>
+{% endblock %}

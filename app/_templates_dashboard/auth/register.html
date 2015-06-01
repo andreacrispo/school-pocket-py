@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}School Pocket - Register {% endblock %}
+
+{% block styles %}
+{{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">  
+
+    <link   href="{{ url_for('static', filename='css/AdminLTE.min.css') }}"  rel="stylesheet" type="text/css" />
+    <link   href="{{ url_for('static', filename='css/skin-blue.min.css') }}"  rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body_attribs %} class="register-page"{% endblock %}
+
+{% block content %}
+
+    <div class="register-box">
+      <div class="register-logo">
+        <a href="">School <b>Pocket</b></a>
+      </div>
+
+      <div class="register-box-body shadow-z-3">
+        <p class="login-box-msg">{{ _('Register') }}</p>
+         {{ wtf.quick_form(form) }}  
+		    <br />
+        <a class="text-center" href="{{ url_for('auth.login') }}"> {{ _('Already a member? Click here to Login') }} </a>  
+        
+      </div><!-- /.form-box -->
+    </div><!-- /.register-box -->
+{% endblock %}

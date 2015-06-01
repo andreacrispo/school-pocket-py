@@ -1,0 +1,10 @@
+*.pyc
+
+# Translations
+*.mo
+
+# SQLite databases
+*.sqlite
+
+# Virtual environment
+venv/

@@ -1,0 +1,170 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %} School Pocket {% endblock %}
+
+{% set navigation_bar = [       
+    ('main.index',    _('Home')       ),
+    ('main.grades',  _('Grades')      ),
+    ('main.subjects', _('Subjects')   ),   
+    ('main.homeworks', _('Homeworks') )    
+] -%}
+
+{% set active_page = active_page %}
+
+{% block styles %}
+{{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link   href="{{ url_for('static', filename='css/AdminLTE.min.css') }}"  rel="stylesheet" type="text/css" />
+    <link   href="{{ url_for('static', filename='css/skin-blue.min.css') }}"  rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/school-pocket.css') }}" type="text/css">  -->   
+
+{% endblock %}
+
+
+
+{% block body_attribs %} class="skin-blue" {% endblock %}
+{% block body %}
+<div class="wrapper">
+
+{% block navbar %}
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="" class="logo">School <b>Pocket </b></a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+ 
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                   <!--160x160
+                  <img  src="{{ url_for('static', filename='img/login-icon.png') }}" width="120" height="120" class="user-image" alt="User Image"/>-->
+                   
+                  <img src="{{ current_user.imgsrc }}" class="user-image" alt="User Image" />
+                  <span>{{ current_user.username|capitalize }}</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="{{ current_user.imgsrc }}" class="img-circle" alt="User Image" />
+                    <!-- <img src="{{ url_for('static', filename='img/login-icon.png') }}" class="img-circle" alt="User Image" />  -->
+                    <p> {{ current_user.username }} </p>
+                    <p> {{ current_user.email }} </p>
+                  </li>
+ 
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="{{ url_for('main.user', username=current_user.username) }}"  class="btn btn-default btn-flat">{{ _('Profile') }}</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="{{ url_for('auth.logout') }}" class="btn btn-default btn-flat">Logout</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+ 
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="{{ current_user.imgsrc }}" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+              <h4><a href=""> {{ current_user.username|upper }} </a></h4>
+            </div>
+          </div>
+
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MENU</li>
+     
+            {% for function, caption in navigation_bar %}
+               <li{% if caption == active_page %} class="active" {% endif %}>
+               <a href="{{ url_for( function ) }}"> <i class="fa fa-circle-o text-info"></i>{{ caption }}  <!--<small class="label pull-right bg-green">new</small>--></a></li>
+            {% endfor %}
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>     
+{% endblock %}  <!-- endblock navbar -->
+
+
+
+{% block content %}
+
+
+
+<!-- Right side column. Contains the navbar and content of the page -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) 
+<section class="content-header">
+  <h1>
+    Dashboard
+    <small>Version 2.0</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Dashboard</li>
+  </ol>
+</section>
+-->
+
+<section class="content">
+
+   {% for message in get_flashed_messages(category_filter=["success"]) %}
+   <div class="alert alert-success" role="alert"> 
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+   {% for message in get_flashed_messages(category_filter=["error"]) %}
+   <div class="alert alert-danger" role="alert"> 
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+  {% block page_content %}
+
+  {% endblock %}
+</section>
+</div><!-- /.content-wrapper -->
+
+{% endblock %}
+
+
+
+</div><!-- ./wrapper -->
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript"  src="{{ url_for('static', filename='js/app.min.js') }}"  ></script> 
+{{ moment.include_moment() }} 
+
+{% if g.locale != 'en' %}
+  {{ moment.lang( g.locale ) }}
+{% endif %}
+<script type="text/javascript">
+    $(".alert-success").fadeTo(2000, 500).slideUp(500);
+    $(".alert-danger").fadeTo(2000, 500).slideUp(500);
+</script>
+{% endblock %}
+
+{% endblock %} <!-- endblock body -->

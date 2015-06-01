@@ -1,0 +1,306 @@
+body {
+  background-color: #EEEEEE;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+
+/*==============================================================================*/
+.shadow-z-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.shadow-z-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow-z-2-hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.28);
+}
+.shadow-z-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow-z-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.shadow-z-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+/*==============================================================================*/
+
+
+
+/*=============== [ Stile personalizzato per il menu] ========================*/
+.navbar {
+  background-color: #4285f4;
+  border: 0;
+  border-radius: 0;
+}
+.navbar .navbar-brand {
+  position: relative;
+  height: 60px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.84);
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: rgba(255, 255, 255, 0.84);
+  background-color: transparent;
+}
+.navbar .navbar-text {
+  color: rgba(255, 255, 255, 0.84);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.navbar .navbar-nav > li > a {
+  color: rgba(255, 255, 255, 0.84);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+  color: rgba(255, 255, 255, 0.84);
+  background-color: transparent;
+}
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+  color: rgba(255, 255, 255, 0.84);
+  background-color: #01579b;
+}
+.navbar .navbar-nav > .disabled > a,
+.navbar .navbar-nav > .disabled > a:hover,
+.navbar .navbar-nav > .disabled > a:focus {
+  color: #e5e5e5;
+  background-color: transparent;
+}
+.navbar .navbar-toggle {
+  margin-top: 13px;
+  border-color: transparent;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar .navbar-toggle .icon-bar {
+  background-color: rgba(255, 255, 255, 0.84);
+}
+.navbar .navbar-default .navbar-toggle,
+.navbar .navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-nav > .open > a,
+.navbar .navbar-nav > .open > a:hover,
+.navbar .navbar-nav > .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.navbar-default .navbar-toggle { float: left; }
+
+.navbar-login{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+.icon-size{
+    font-size: 94px;
+}
+
+
+
+
+/*==================== [ Stile per le tabelle ] ==============================*/
+/*
+.table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  text-align: center;
+}
+
+.table-bordered{  border: none; }
+
+.table thead th {
+  background-color: #01579b;
+  color: white;
+  text-align: center;
+  border: none!important;
+  padding: 21px 21px 21px 21px !important;
+}
+.table tbody th {
+  background-color: #78909c;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.table tbody td {
+  background-color: #fafafa;
+  text-align: center;
+  vertical-align: middle!important;
+
+}
+*/
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  background-color: #fff;
+
+}
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  text-align: left;
+  padding: 1.6rem;
+  vertical-align: top;
+  border-top: 0;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+}
+.table > thead > tr > th {
+  font-weight: 700;
+  color: #fff;
+  vertical-align: bottom;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  background-color: #01579B;
+  padding: 21px 21px 21px 21px !important;
+  text-transform: uppercase;
+}
+
+.table > tbody + tbody {
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f5f5f5;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: rgba(0,0,0,0.12);
+}
+
+#th-grade{
+  background-color: #90A4AE;
+  color: white;
+}
+#tr-completed{
+ text-decoration: line-through;
+}
+/*=================================================================*/
+
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 0px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+#submit.btn.btn-default{
+  color: #fff;
+  background-color: #4285f4;
+  border-color: #285e8e;
+  float: right!important;
+}
+
+#tab-content-profile{
+  margin-top: 40px;
+}
+
+.btn {
+  position: relative;
+  padding: 8px 15px;
+  border: 0;
+  margin: 2px 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.84);
+  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none !important;
+}
+
+.btn-primary{
+  background-color:  #4285f4;
+}
+ 
+.alert {
+  border: 0px;
+  border-radius: 0;
+}
+.alert,
+.alert-default {
+  background-color: #ffffff;
+}
+.alert-primary {
+  background-color: #4285f4;
+}
+.alert-success {
+  background-color: #0f9d58;
+}
+.alert-info {
+  background-color: #03a9f4;
+}
+.alert-warning {
+  background-color: #ff5722;
+}
+.alert-danger {
+  background-color: #f44336;
+}
+.alert-info,
+.alert-danger,
+.alert-warning,
+.alert-success {
+  color: #FFFFFF;
+}
+.alert-default a,
+.alert-default .alert-link {
+  color: #000000;
+}
+
+
+.well {
+background-color: #fff;
+padding: 19px;
+margin-bottom: 20px;
+box-shadow: 0 3px 10px rgba(0,0,0,.23),0 3px 10px rgba(0,0,0,.16);
+border-radius: 2px;
+border: 0;
+}
+/*=============== [ Media Query] ========================*/
+
+
+/*==========================================================*/

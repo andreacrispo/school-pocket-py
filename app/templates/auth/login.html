@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}School Pocket - Login {% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+	<h1></h1>
+</div>
+
+    <div class=" well col-sm-6 col-md-4 col-md-offset-4 shadow-z-4"  >
+    <img class="profile-img" src="{{ url_for('static', filename='img/login-icon.png') }}" alt="">
+				 {{ wtf.quick_form(form) }}
+	</div>
+
+    <div class="col-sm-6 col-md-4 col-md-offset-4" >
+		<a class="btn btn-success btn-block shadow-z-2" href="{{ url_for('auth.register') }}"> {{	_('Click here to register') }}
+		</a>  
+    </div>
+
+
+{% endblock %}

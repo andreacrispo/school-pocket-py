@@ -1,0 +1,292 @@
+# Italian translations for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-11-14 23:47+0100\n"
+"PO-Revision-Date: 2014-11-14 23:50+0100\n"
+"Last-Translator: Andrea <andrea.crispo.cr@gmail.com>\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: app/auth/forms.py:10 app/auth/forms.py:20
+msgid "Email"
+msgstr "Email"
+
+#: app/auth/forms.py:12 app/auth/forms.py:26 app/auth/forms.py:51
+msgid "Password"
+msgstr "Password"
+
+#: app/auth/forms.py:13
+msgid "Keep me logged in"
+msgstr "Ricordami"
+
+#: app/auth/forms.py:14
+msgid "Login"
+msgstr "Login"
+
+#: app/auth/forms.py:22
+msgid "Username"
+msgstr "Username"
+
+#: app/auth/forms.py:28
+msgid "Confirm password"
+msgstr "Conferma password"
+
+#: app/auth/forms.py:29 app/templates/auth/register.html:7
+msgid "Register"
+msgstr "Registrati"
+
+#: app/auth/forms.py:33
+msgid "Email already registered.Please use another one"
+msgstr "Email già utilizzata.Utilizzarne un'altra"
+
+#: app/auth/forms.py:37
+msgid "Username already in use."
+msgstr "Username già usato."
+
+#: app/auth/forms.py:41
+msgid "Old password"
+msgstr "Vecchia Password"
+
+#: app/auth/forms.py:42
+msgid "New password"
+msgstr "Nuova password"
+
+#: app/auth/forms.py:44
+msgid "Confirm new password"
+msgstr "Conferma nuova password"
+
+#: app/auth/forms.py:45
+msgid "Update Password"
+msgstr "Aggiorna password"
+
+#: app/auth/forms.py:49
+msgid "New Email"
+msgstr "Nuova Email"
+
+#: app/auth/forms.py:52
+msgid "Update Email Address"
+msgstr "Aggiorna email"
+
+#: app/auth/forms.py:56
+msgid "Email already registered."
+msgstr "Email già registrata"
+
+#: app/auth/views.py:34
+msgid "Invalid email or password"
+msgstr "Email o password non validi"
+
+#: app/auth/views.py:50
+msgid "A confirmation email has been sent to you by email."
+msgstr "Ti è stata inviata un email di conferma"
+
+#: app/auth/views.py:60
+msgid "You have confirmed your account. Thanks!"
+msgstr "Hai confermato il tuo account"
+
+#: app/auth/views.py:62
+msgid "The confirmation link is invalid or has expired."
+msgstr "Il link di conferma non è valido o scaduto"
+
+#: app/auth/views.py:72
+msgid "A new confirmation email has been sent to you by email."
+msgstr "Una è stata inviata una nuova email di conferma."
+
+#: app/main/views.py:49
+msgid "The subject has been inserted."
+msgstr "Materia inserita"
+
+#: app/main/views.py:54
+msgid "The subject has been update."
+msgstr "La materia è stato aggiornata"
+
+#: app/main/views.py:67
+msgid "Subject was deleted successfully"
+msgstr "La materia è stato eliminata"
+
+#: app/main/views.py:93
+msgid "The grade has been inserted."
+msgstr "Voto inserito"
+
+#: app/main/views.py:100
+msgid "The grade has been update."
+msgstr "Il voto è stato aggiornato"
+
+#: app/main/views.py:112
+msgid "Grade was deleted successfully"
+msgstr "Il voto è stato eliminato"
+
+#: app/main/views.py:140
+msgid "The homework has been inserted."
+msgstr "Compito inserito"
+
+#: app/main/views.py:148
+msgid "The homework has been update."
+msgstr "Il compito è stato aggiornato"
+
+#: app/main/views.py:160
+msgid "Homework was deleted successfully"
+msgstr "Il compito è stato eliminato"
+
+#: app/main/views.py:170
+msgid "Homework was update successfully"
+msgstr "Il compito è stato eliminato"
+
+#: app/templates/base.html:6
+msgid "Home"
+msgstr "Home"
+
+#: app/templates/base.html:7 app/templates/grades.html:3
+#: app/templates/grades.html:8
+msgid "Grades"
+msgstr "Voti"
+
+#: app/templates/base.html:8 app/templates/subjects.html:3
+#: app/templates/subjects.html:9
+msgid "Subjects"
+msgstr "Materie"
+
+#: app/templates/base.html:9 app/templates/homeworks.html:3
+#: app/templates/homeworks.html:8
+msgid "Homeworks"
+msgstr "Compiti"
+
+#: app/templates/base.html:48 app/templates/profile.html:7
+msgid "Profile"
+msgstr "Profilo"
+
+#: app/templates/grades.html:9
+msgid "Add grades"
+msgstr "Aggiungi voto"
+
+#: app/templates/grades.html:16 app/templates/homeworks.html:16
+msgid "Date"
+msgstr "Data"
+
+#: app/templates/grades.html:17
+msgid "Grade"
+msgstr "Voto"
+
+#: app/templates/grades.html:18
+msgid "Description"
+msgstr "Descrizione"
+
+#: app/templates/homeworks.html:9
+msgid "Add homework"
+msgstr "Aggiungi Compito"
+
+#: app/templates/homeworks.html:17
+msgid "Homework"
+msgstr "Compito"
+
+#: app/templates/homeworks.html:18
+msgid "Subject"
+msgstr "Materia"
+
+#: app/templates/homeworks.html:19
+msgid "Priority"
+msgstr "Priorita"
+
+#: app/templates/homeworks.html:36
+msgid "Low"
+msgstr "Bassa"
+
+#: app/templates/homeworks.html:38
+msgid "Normal"
+msgstr "Normale"
+
+#: app/templates/homeworks.html:40
+msgid "High"
+msgstr "Alta"
+
+#: app/templates/profile.html:8 app/templates/auth/edit_profile.html:6
+msgid "Edit Profile"
+msgstr "Modifica Profilo"
+
+#: app/templates/subjects.html:10
+msgid "Add Subject"
+msgstr "Aggiungi materia"
+
+#: app/templates/auth/change_password.html:6
+#: app/templates/auth/edit_profile.html:13
+msgid "Change Password"
+msgstr "Cambia password"
+
+#: app/templates/auth/edit_profile.html:12
+msgid "Change Email"
+msgstr "Cambia Email"
+
+#: app/templates/auth/login.html:16
+msgid "Click here to register"
+msgstr "Clicca qui per registrarti"
+
+#: app/templates/auth/register.html:16
+msgid "Already a member? Click here to Login"
+msgstr "Hai già un account? Effetua il login"
+
+#: app/templates/auth/unconfirmed.html:7
+msgid "Hello,"
+msgstr "Ciao,"
+
+#: app/templates/auth/unconfirmed.html:9
+msgid "You have not confirmed your account yet."
+msgstr "Non hai ancora confermato il tuo account"
+
+#: app/templates/auth/unconfirmed.html:10
+msgid ""
+"\n"
+"        Before you can access this site you need to confirm your account.\n"
+"        Check your inbox, you should have received an email with a confirmation link.\n"
+"        "
+msgstr ""
+"\n"
+"         Prima di poter accedere a questo sito è necessario confermare il tuo account. \n"
+"         Controlla la tua email, dovresti aver ricevuto una mail con un link di conferma. \n"
+
+#: app/templates/auth/unconfirmed.html:16
+msgid "Need another confirmation email?"
+msgstr "Hai bisogna di un' altra email di conferma?"
+
+#: app/templates/auth/unconfirmed.html:17
+msgid "Click here"
+msgstr "Clicca qui"
+
+#~ msgid "Insert"
+#~ msgstr "Inserisci"
+
+#~ msgid "Deadline"
+#~ msgstr "Scadenza"
+
+#~ msgid "Homework was complete successfully"
+#~ msgstr "Compito completato"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#~ msgid "Keep me logged in"
+#~ msgstr "Ricordami"
+
+#~ msgid "Login"
+#~ msgstr "Login"
+
+#~ msgid "Username"
+#~ msgstr "Username"
+
+#~ msgid "Email already registered.Please use another one"
+#~ msgstr "E-mail già utilizzata."
+
+#~ msgid "Username already in use."
+#~ msgstr "Username già utilizzato"

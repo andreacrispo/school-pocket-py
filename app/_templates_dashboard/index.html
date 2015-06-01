@@ -1,0 +1,43 @@
+{% extends "base_dashboard.html" %}
+
+{% set active_page = 'Home' %}
+
+
+{% block page_content %}
+
+<div class="page-header"></div>
+
+<div class="row">
+<div class="col-md-4"></div>
+
+<div class="col-md-4">
+    <div class="info-box shadow-z-3 text-center">
+      <!-- Apply any bg-* class to to the icon to color it -->
+      <span class="info-box-icon bg-red">{{  models['grades'] }} </span>
+      <div class="info-box-content">
+        <h1>{{ _('Grades') }}</h1>
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+
+    <div class="info-box shadow-z-3 text-center">
+      <!-- Apply any bg-* class to to the icon to color it -->
+      <span class="info-box-icon bg-green">{{  models['subjects'] }}</span>
+      <div class="info-box-content ">
+        <h1>{{ _('Subjects') }} </h1> 
+      </div><!-- /.info-box-content -->
+
+    </div><!-- /.info-box -->
+
+    <div class="info-box shadow-z-3 text-center">
+      <!-- Apply any bg-* class to to the icon to color it -->
+      <span class="info-box-icon bg-blue">{{  models['homeworks'] }}</span>
+      <div class="info-box-content">
+        <h1>{{ _('Homeworks') }}  </h1>
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+
+</div> <!-- /col-md-4 -->
+<div class="col-md-4"></div>
+
+</div>
+{% endblock %}

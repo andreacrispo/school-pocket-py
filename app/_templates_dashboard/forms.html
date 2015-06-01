@@ -1,0 +1,47 @@
+{% extends "base_dashboard.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pickadate/css/default.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pickadate/css/default.date.css') }}" >
+{% endblock %}
+
+
+
+{% block page_content %}
+<div class="row">
+ <div class="col-md-4"></div>
+<div class="col-md-4">
+   
+<div class="box box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Compila i seguenti campi</h3>
+                </div>
+                <div class="box-body">
+                  {{ wtf.quick_form(form) }}
+                </div>
+              </div>
+</div> <!-- /col-md-4 --> 
+
+<div class="col-md-4"></div>
+</div>   <!-- /.row -->
+{% endblock %}
+
+
+
+{% block scripts %}
+ {{ super() }}
+<script src="{{ url_for('static', filename='pickadate/js/picker.js') }}"></script>
+<script src="{{ url_for('static', filename='pickadate/js/picker.date.js') }}"></script>
+{% if g.locale != 'en' %}
+    <script src="/static/pickadate/translations/{{ g.locale }}.js"></script>
+{% endif %}
+<script type="text/javascript">
+    $('#date').pickadate({
+        formatSubmit: 'yyyy-mm-dd',
+        hiddenName: true
+    });
+</script>
+{% endblock %}

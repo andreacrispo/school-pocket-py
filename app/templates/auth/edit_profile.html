@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+ 
+{% block page_content %}
+<div class="page-header">
+	<h1>{{ _('Edit Profile') }}</h1>
+</div>
+
+
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#change_email" data-toggle="tab">{{ _('Change Email') }}</a></li>
+        <li><a href="#change_password" data-toggle="tab">{{ _('Change Password') }}</a></li>
+ 
+    </ul>
+    <div id="tab-content-profile" class="tab-content">
+        <div class="tab-pane active" id="change_email">
+            <div class=" well col-sm-6 col-md-4 col-md-offset-4 shadow-z-4">
+                         {{ wtf.quick_form(form_email) }}
+            </div>
+        </div>
+        <div class="tab-pane" id="change_password">
+		    <div class=" well col-sm-6 col-md-4 col-md-offset-4 shadow-z-4">
+						 {{ wtf.quick_form(form_password) }}
+			</div>
+        </div>
+    </div>
+</div>
+ 
+ 
+
+
+{% endblock %}
+
+{% block scripts %}
+ {{ super() }}
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script> 
+{% endblock %}

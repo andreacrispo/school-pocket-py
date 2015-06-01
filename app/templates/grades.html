@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% set active_page = _('Grades') %}
+
+{% block page_content %}
+
+<div class="page-header">
+   <h1>{{ _('Grades') }}  
+    <a href="{{ url_for('main.action_grade') }}" class="btn btn-primary pull-right" >{{ _('Add grades') }}</a>
+   </h1>
+</div>
+
+<table  class="table table-bordered" >
+<thead>
+    <tr>  
+        <th>{{ _('Date') }}</th> 
+        <th>{{ _('Grade') }}</th>
+        <th>{{ _('Description') }}</th>   
+        <th  class="col-md-2" id='no_style' ></th>  
+    </tr>
+</thead>
+<tbody>
+
+{% for subject in subjects %} 
+  <tr>  
+  <th colspan='3' > {{ subject.subject }} </th>
+  </tr>
+{% for grade in grades %} 
+   {% if subject.id == grade.subject_id %} 
+    <tr>  
+        <td>{{ moment(grade.date).format('L') }}</td> 
+        <td>{{ grade.grade }} </td>
+        <td>{{ grade.description }}</td> 
+        <td id='no_style'> 
+          <div class='btn-group' >
+           <a class='btn btn-primary' href="{{ url_for('main.action_grade',id=grade.id) }}" data-toggle='modal' >         <i class='glyphicon glyphicon-pencil'></i></a>
+           <a class='btn btn-primary' href="{{ url_for('main.delete_grade',id=grade.id)}}"> <i class='glyphicon glyphicon-trash'></i> </a> 
+          </div>
+        </td>  
+    </tr>
+   {% endif %}
+{% endfor %}
+
+{% endfor %}
+</tbody>
+</table>
+
+
+{% endblock %}
