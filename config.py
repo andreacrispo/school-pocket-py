@@ -4,7 +4,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or '%\xee\xda;\xdemo\x03\xee~\x1eV\xbb\xaf5\xa6\xfa\xfdPY\xff\xf3\x03h'
-    SSL_DISABLE = False
+    SSL_DISABLE = True
 
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -45,7 +45,7 @@ class ProductionConfig(Config):
 class HerokuConfig(ProductionConfig):
     """ Deployment on Heroku """
     SSL_DISABLE = bool(os.environ.get('SSL_DISABLE'))
-    
+
     @classmethod
     def init_app(cls, app):
     ProductionConfig.init_app(app)
