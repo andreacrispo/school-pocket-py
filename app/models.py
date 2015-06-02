@@ -64,7 +64,7 @@ class User(UserMixin, db.Model):
 class Subject(db.Model):
     __tablename__ = 'subjects'
     id            = db.Column(db.Integer, primary_key=True)
-    subject       = db.Column(db.Integer, index=True)
+    subject       = db.Column(db.String(255), index=True)
     description   = db.Column(db.String(255), nullable=True)
 
     user_id       = db.Column(db.Integer, db.ForeignKey('users.id')) 
