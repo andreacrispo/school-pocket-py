@@ -29,7 +29,7 @@ def upgrade():
     op.create_index('ix_users_username', 'users', ['username'], unique=True)
     op.create_table('subjects',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('subject', sa.Integer(), nullable=True),
+    sa.Column('subject', sa.String(length=255), nullable=True),
     sa.Column('description', sa.String(length=255), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
