@@ -19,7 +19,7 @@ class User(UserMixin, db.Model):
     confirmed     = db.Column(db.Boolean, default=False)
     img_profile   = db.Column(db.String(128), nullable=True)
 
-    subjects      = db.relationship('Subject', backref='user' ,lazy='dynamic')
+    subjects      = db.relationship('Subject', backref='user', lazy='dynamic')
 
     @property
     def password(self):

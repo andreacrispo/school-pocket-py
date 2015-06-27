@@ -18,7 +18,6 @@ class DateFieldLocale(DateTimeField):
     def process_formdata(self, valuelist):
     	if valuelist:
     		date_str = ''.join(valuelist)
-    		print date_str
     		try:
     			format = '%Y-%m-%d'
     			self.data = datetime.strptime(date_str, format).date()
